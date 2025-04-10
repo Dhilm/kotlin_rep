@@ -51,11 +51,5 @@ class MyService : Service() {
         return START_STICKY
     }
 
-    override fun onDestroy() {
-        Toast.makeText(this, "Service Stopped", Toast.LENGTH_SHORT).show()
-        soundPlayer.stop()
-        super.onDestroy()
-    }
 
-    override fun onBind(intent: Intent?): IBinder? = null
 }
